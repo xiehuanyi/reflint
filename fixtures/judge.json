@@ -1,0 +1,37 @@
+{
+ "C1|[1]": {
+  "claim_id": "C1",
+  "ref_key": "[1]",
+  "verdict": "supported",
+  "evidence": "We propose a new simple network architecture, the Transformer, based solely on attention mechanisms, dispensing with recurrence and convolutions entirely.",
+  "explanation": "The abstract explicitly states that the Transformer architecture is based solely on attention mechanisms, dispensing with recurrence entirely."
+ },
+ "C2|[5]": {
+  "claim_id": "C2",
+  "ref_key": "[5]",
+  "verdict": "supported",
+  "evidence": "Using network proximity analyses of drug targets and HCoV\u2013host interactions in the human interactome, we prioritize 16 potential anti-HCoV repurposable drugs (e.g., melatonin, mercaptopurine, and sirolimus) that are further validated by enrichment analyses of drug-gene signatures and HCoV-induced transcriptomics data in human cell lines.",
+  "explanation": "The abstract confirms that network proximity between drug targets and host proteins was used to prioritize (shortlist) repurposable drugs against SARS-CoV-2."
+ },
+ "C3|[6]": {
+  "claim_id": "C3",
+  "ref_key": "[6]",
+  "verdict": "supported",
+  "evidence": "demonstrating accuracy competitive with experimental structures in a majority of cases and greatly outperforming other methods.",
+  "explanation": "The abstract states that AlphaFold achieves accuracy competitive with experimental structures, supporting the claim that protein structure prediction reaches near-experimental accuracy."
+ },
+ "C4|[2]": {
+  "claim_id": "C4",
+  "ref_key": "[2]",
+  "verdict": "unverifiable",
+  "evidence": "no relevant line",
+  "explanation": "The provided abstract text cuts off before presenting the findings regarding the association between hydroxychloroquine treatment and in-hospital mortality."
+ },
+ "C6|[4]": {
+  "claim_id": "C6",
+  "ref_key": "[4]",
+  "verdict": "unsupported",
+  "evidence": "no relevant line",
+  "explanation": "The abstract describes using deep learning to predict molecules with antibacterial activity and testing them in murine (mouse) models, but it does not mention predicting clinical-trial outcomes."
+ }
+}

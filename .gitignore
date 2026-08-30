@@ -1,0 +1,17 @@
+.env
+.venv/
+.cache/
+__pycache__/
+*.pyc
+reflint-report.md
+dist/
+
+# war-room internal docs and heavy media (not for the public repo)
+docs/event.md
+docs/idea-brief.md
+docs/plan.md
+docs/submission.md
+docs/submit-checklist.md
+docs/submit-info.md
+docs/video-script.md
+docs/video*.mp4

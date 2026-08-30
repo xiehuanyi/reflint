@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="780" viewBox="0 0 1240 780" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <marker id="arrowc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0e7490"/>
+    </marker>
+  </defs>
+
+  <rect width="1240" height="780" fill="#f8fafc"/>
+  <text x="40" y="48" font-size="26" font-weight="bold" fill="#0f172a">RefLint — citation-integrity agent</text>
+  <text x="40" y="74" font-size="15" fill="#475569">AWS Strands Agents SDK · orchestrator + judge (agents-as-tools) · Gemini via the Strands Gemini model provider</text>
+
+  <!-- User / CLI -->
+  <rect x="40" y="120" width="230" height="120" rx="10" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+  <text x="155" y="150" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">Researcher</text>
+  <rect x="60" y="165" width="190" height="30" rx="5" fill="#0f172a"/>
+  <text x="155" y="185" font-size="12.5" fill="#7dd3fc" text-anchor="middle" font-family="monospace">$ reflint audit paper.md</text>
+  <text x="155" y="222" font-size="12.5" fill="#475569" text-anchor="middle">Rich TUI · live tool trace</text>
+
+  <!-- Orchestrator -->
+  <rect x="370" y="105" width="330" height="170" rx="12" fill="#ecfeff" stroke="#0e7490" stroke-width="2.5"/>
+  <text x="535" y="135" font-size="16" font-weight="bold" fill="#155e75" text-anchor="middle">Orchestrator Agent</text>
+  <text x="535" y="156" font-size="13" fill="#155e75" text-anchor="middle">strands.Agent · gemini-flash-lite-latest</text>
+  <text x="535" y="182" font-size="12.5" fill="#334155" text-anchor="middle">agentic loop: reason → pick tool → observe</text>
+  <text x="535" y="202" font-size="12.5" fill="#334155" text-anchor="middle">verdicts must trace to tool output</text>
+  <rect x="415" y="220" width="240" height="34" rx="6" fill="#cffafe"/>
+  <text x="535" y="242" font-size="12.5" fill="#155e75" text-anchor="middle">5 tools · report schema enforced</text>
+
+  <!-- arrow user -> orchestrator -->
+  <line x1="270" y1="180" x2="364" y2="180" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="364" y1="205" x2="270" y2="205" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="317" y="172" font-size="11.5" fill="#475569" text-anchor="middle">audit</text>
+  <text x="317" y="222" font-size="11.5" fill="#475569" text-anchor="middle">report + exit code</text>
+
+  <!-- Tools column -->
+  <text x="510" y="310" font-size="14" font-weight="bold" fill="#334155" text-anchor="end">tool belt</text>
+  <g font-size="13" fill="#0f172a">
+    <rect x="380" y="335" width="310" height="36" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+    <text x="395" y="358">load_manuscript · <tspan fill="#64748b">deterministic parser</tspan></text>
+    <rect x="380" y="379" width="310" height="36" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+    <text x="395" y="402">verify_references · <tspan fill="#64748b">resolve + retraction check</tspan></text>
+    <rect x="380" y="423" width="310" height="36" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+    <text x="395" y="446">search_scholar · <tspan fill="#64748b">phantom double-check</tspan></text>
+    <rect x="380" y="467" width="310" height="36" rx="7" fill="#fef9c3" stroke="#ca8a04" stroke-width="1.5"/>
+    <text x="395" y="490">judge_claims · <tspan fill="#a16207">referee sub-agent ➜</tspan></text>
+    <rect x="380" y="511" width="310" height="36" rx="7" fill="#ffffff" stroke="#64748b" stroke-width="1.5"/>
+    <text x="395" y="534">submit_report · <tspan fill="#64748b">pydantic-validated</tspan></text>
+  </g>
+  <line x1="535" y1="275" x2="535" y2="330" stroke="#0e7490" stroke-width="2" marker-end="url(#arrowc)"/>
+
+  <!-- Judge sub-agent -->
+  <rect x="760" y="450" width="270" height="110" rx="12" fill="#fefce8" stroke="#ca8a04" stroke-width="2.5"/>
+  <text x="895" y="480" font-size="15" font-weight="bold" fill="#854d0e" text-anchor="middle">Claim Judge (sub-agent)</text>
+  <text x="895" y="501" font-size="12.5" fill="#854d0e" text-anchor="middle">strands.Agent · gemini-3.5-flash</text>
+  <text x="895" y="524" font-size="12" fill="#57534e" text-anchor="middle">claim vs. abstract → supported / partial /</text>
+  <text x="895" y="541" font-size="12" fill="#57534e" text-anchor="middle">unsupported · must quote evidence</text>
+  <line x1="690" y1="485" x2="754" y2="493" stroke="#ca8a04" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Resilience layer -->
+  <rect x="760" y="130" width="270" height="250" rx="12" fill="#ffffff" stroke="#334155" stroke-width="1.5" stroke-dasharray="none"/>
+  <text x="895" y="158" font-size="14.5" font-weight="bold" fill="#0f172a" text-anchor="middle">resilience layer</text>
+  <text x="895" y="178" font-size="12" fill="#475569" text-anchor="middle">timeout · retry · disk cache · stale fallback</text>
+  <g font-size="12.5" fill="#0f172a">
+    <rect x="785" y="195" width="220" height="32" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="895" y="216" text-anchor="middle">Crossref REST <tspan fill="#64748b">· resolve / fuzzy match</tspan></text>
+    <rect x="785" y="235" width="220" height="32" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="895" y="256" text-anchor="middle">OpenAlex <tspan fill="#64748b">· is_retracted / abstracts</tspan></text>
+    <rect x="785" y="275" width="220" height="32" rx="6" fill="#f1f5f9" stroke="#94a3b8"/>
+    <text x="895" y="296" text-anchor="middle">Semantic Scholar <tspan fill="#64748b">· abstract fallback</tspan></text>
+    <rect x="785" y="322" width="220" height="40" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="5 3"/>
+    <text x="895" y="339" text-anchor="middle" fill="#64748b">DEMO_MODE: recorded fixtures,</text>
+    <text x="895" y="355" text-anchor="middle" fill="#64748b">zero network · zero keys</text>
+  </g>
+  <line x1="690" y1="397" x2="754" y2="300" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="748" y="338" font-size="11.5" fill="#475569" text-anchor="end">keyless open APIs</text>
+
+  <!-- Replay model -->
+  <rect x="370" y="620" width="330" height="110" rx="12" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" stroke-dasharray="7 4"/>
+  <text x="535" y="650" font-size="15" font-weight="bold" fill="#5b21b6" text-anchor="middle">ReplayModel (DEMO_MODE)</text>
+  <text x="535" y="672" font-size="12.5" fill="#5b21b6" text-anchor="middle">custom Strands Model provider</text>
+  <text x="535" y="694" font-size="12" fill="#6d28d9" text-anchor="middle">replays a recorded real Gemini run through the</text>
+  <text x="535" y="711" font-size="12" fill="#6d28d9" text-anchor="middle">REAL agent loop + REAL tools — deterministic demo</text>
+  <line x1="535" y1="614" x2="535" y2="557" stroke="#7c3aed" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#arrow)"/>
+
+  <!-- Outputs -->
+  <rect x="40" y="450" width="230" height="180" rx="10" fill="#ffffff" stroke="#334155" stroke-width="1.5"/>
+  <text x="155" y="480" font-size="15" font-weight="bold" fill="#0f172a" text-anchor="middle">audit report</text>
+  <g font-size="12.5">
+    <text x="60" y="507" fill="#b91c1c" font-weight="bold">R001 PHANTOM</text>
+    <text x="60" y="527" fill="#b91c1c" font-weight="bold">R002 RETRACTED</text>
+    <text x="60" y="547" fill="#b91c1c" font-weight="bold">R003 UNSUPPORTED</text>
+    <text x="60" y="567" fill="#a16207">R004 MISMATCH · R005/6 warn</text>
+    <text x="60" y="592" fill="#475569">reflint-report.md · console panels</text>
+    <text x="60" y="612" fill="#475569">exit 1 on errors → CI gate</text>
+  </g>
+  <path d="M 375 540 C 330 540 320 540 273 540" stroke="#475569" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+
+  <text x="1200" y="765" font-size="11" fill="#94a3b8" text-anchor="end">every external call: timeout + retry + cached fallback · fakes marked DEMO: in code</text>
+</svg>
