@@ -10,6 +10,7 @@ Honest log of which AI tools built what. Kept current per workspace rules.
 | 2026-08-31 | Gemini (gemini-flash-lite-latest / 3.5-flash) | Runtime models inside the product itself: orchestrator reasoning + claim-support judging |
 | 2026-08-31 | Claude (Claude Code agent) | Produced the demo video (`docs/video.mp4`): captured the real live run, built the xterm.js replay + Playwright screen recording, slides, and ffmpeg assembly (see `docs/video-notes.md`) |
 | 2026-08-31 | Microsoft Edge TTS (`edge-tts`, en-US-AndrewNeural) | Synthetic voiceover narration in the demo video — the narrator voice is TTS, not a human recording; narration text in `docs/video-narration.md` |
+| 2026-09-05 | OpenAI Codex | Audited links and submission readiness, verified the replay golden path, and assisted with Devpost registration/submission at the author's request |
 
 ## What is real vs. seeded (demo craft, disclosed)
 
